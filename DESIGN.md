@@ -1,131 +1,251 @@
 
 
-# NeuvaChat – Visual Design Document
 
-This document defines the full visual style and UI layout for the NeuvaChat application.  
-All developers and designers must follow these guidelines to keep the app consistent.
+✨ DESIGN.md — NeuvaChat App Design Document
 
----
+🎨 1. Design Philosophy
 
-## 🎨 1. Color Palette
+NeuvaChat is designed to be:
 
-**Primary Color (Brand)**
-- Purple: `#8A2BE2`
+Fast
 
-**Secondary Colors**
-- Deep Purple: `#5D1EA8`
-- Soft Lavender: `#E6D8FF`
+Clean
 
-**UI Colors**
-- Background (main): `#FFFFFF`
-- Chat bubble (user): `#8A2BE2`
-- Chat bubble (AI): `#F2F2F2`
-- Text (dark): `#222222`
-- Text (light): `#FFFFFF`
+Beginner-friendly
+
+Modern and minimalistic
+
+Consistent across Android, Web, and Desktop
+
+
+The interface must feel light, responsive, and intuitive even on low-end devices.
+
 
 ---
 
-## 🖼️ 2. Fonts
+📱 2. App Layout Structure
 
-**Main Font:**  
-- Roboto (default Android font, clean and modern)
+Top-Level Screens
 
-**Font Weights**  
-- Regular (body text)  
-- Medium (buttons and labels)  
-- Bold (titles)
+The app consists of the following screens:
 
----
+1. Splash Screen
 
-## 💬 3. Chat Screen Layout
+Shows the NeuvaChat logo
 
-The main screen will follow this structure:
+Loads user session / app data
 
-### **Top Area**
-- Title text: “NeuvaChat”
-- Centered
-- Font size: 22–24px
-- Weight: Bold
 
-### **Middle Area – Messages**
-- Scrollable vertical area  
-- New messages appear at the bottom  
-- Spacing between messages: 6–10px  
 
-#### **User Message Bubble (Right-Aligned)**
-- Background: Purple `#8A2BE2`
-- Text: White
-- Corner radius: 18px
-- Max width: 75% of screen
+2. Onboarding Screen
 
-#### **AI Message Bubble (Left-Aligned)**
-- Background: Light gray `#F2F2F2`
-- Text: Dark gray `#222222`
-- Corner radius: 18px
-- Max width: 75%
+Welcome message
 
----
+Request permissions (internet, storage optional)
 
-## ⌨️ 4. Input Bar
+Continue button
 
-At the bottom of the screen:
 
-- Rounded rectangle input field
-- Background: `#F7F7F7`
-- Border radius: 20px  
-- Left: text input  
-- Right: Send button  
 
-### **Send Button**
-- Icon: Paper plane  
-- Background: Purple  
-- Shape: Circular  
-- Size: 40–48px  
-- Icon color: White  
+3. Login / API Key Screen
 
----
+User enters:
 
-## 🔄 5. Loading Indicator
+OpenAI API key
 
-When waiting for AI reply:
+(Optional) Model selection
 
-- Three-dot bouncing animation  
-- Color: Primary Purple  
+
+Validate key
+
+Save securely
+
+
+
+4. Home / Chat Screen
+
+Chat history list (scrollable)
+
+Main chat area
+
+User input box + send button
+
+Settings shortcut
+
+
+
+5. Settings Screen
+
+API key management
+
+Theme selection (Light / Dark)
+
+Clear chat history
+
+About section
+
+
+
+
 
 ---
 
-## 🚫 6. Error Messages
+🧩 3. Component Design
 
-Simple modal-style message:
+Chat Bubbles
 
-- Background: Soft red (`#FFCCCC`)
-- Text: Dark red (`#990000`)
+User messages: right-aligned, blue bubble
 
-Examples:
-- “No internet connection”
-- “API error — please try again”
+AI messages: left-aligned, white or grey bubble
+
+Should support:
+
+Text
+
+Code blocks
+
+Markdown
+
+Images (future update)
+
+
+
+Input Bar
+
+Text field
+
+Microphone button (future)
+
+“Send” icon
+
+Auto-expand on long messages
+
+
 
 ---
 
-## 🎉 7. Branding Elements
+🎨 4. Color System
 
-- App icon: Purple circle with a white chat bubble inside  
-- Splash screen:  
-  - Purple background  
-  - White logo centered  
-  - Text: “NeuvaChat” under the logo  
+Primary: #4C7EFF
+Secondary: #FFFFFF
+Accent: #A5B4FC
+Error: #EF4444
+Background Light: #F5F7FA
+Background Dark: #0F172A
 
----
-
-## 📱 8. Screens Included
-
-1. **Splash Screen**  
-2. **Chat Screen (Main)**  
-3. **Settings Screen** *(future update)*
 
 ---
 
-## ✔️ End of DESIGN.md
-This file ensures every developer keeps the app’s design consistent.
+🔤 5. Typography
+
+Title: Bold, 22sp
+
+Section headers: 18sp
+
+Body text: 14–16sp
+
+Mono text for code: 14sp
+
+
+Font family: Inter or Roboto (depending on device availability)
+
+
+---
+
+🔧 6. UI Flow Diagram (Text Version)
+
+Splash → Onboarding → Login → Home(Chat)
+                                  ↘
+                                   Settings
+
+
+---
+
+🧱 7. Modular Screen Breakdown
+
+Splash Activity
+
+Logo centered
+
+2-second fade animation
+
+
+Onboarding Activity
+
+Welcome text
+
+“Continue” button
+
+
+Login/API Key Activity
+
+Field for API key
+
+“Test Connection”
+
+“Save & Continue”
+
+
+Chat Activity
+
+Chat recycler view
+
+AI typing indicator
+
+Overflow menu
+
+
+Settings Activity
+
+Reset / Clear Data
+
+Theme toggle
+
+About app
+
+
+
+---
+
+🚀 8. Performance Requirements
+
+Load chat instantly
+
+Smooth scrolling
+
+Caching for messages
+
+Offline placeholder states
+
+Minimal animations for speed
+
+
+
+---
+
+📦 9. Deliverables for MIT App Inventor
+
+Screen XML equivalents
+
+Component properties
+
+Blocks layout for:
+
+API calls
+
+Chat display
+
+Settings storage
+
+Error handling
+
+
+
+
+---
+
+🏁 End of DESIGN.md
+
+
 
 
